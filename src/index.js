@@ -11,7 +11,9 @@ d.log = console.log.bind(console)
 // wrapping debugjs to pass color as cb
 const debug = function(namespace, color) {
   const debugjs = d(namespace)
-  debugjs.color = color
+
+  if (color)
+    debugjs.color = color
 
   // last param is color
   const colorCb = function() {
@@ -39,4 +41,4 @@ const debug = function(namespace, color) {
   return proxy
 }
 
-export default debug
+export default {debug, d}
