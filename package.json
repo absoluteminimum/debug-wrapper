@@ -1,0 +1,38 @@
+{
+  "name": "debug-wrapper",
+  "version": "0.0.1",
+  "description": "a wrapper for debugjs",
+  "main": "lib/index.js",
+  "npm": {
+    "esModules": true
+  },
+  "files": [
+    "src",
+    "lib",
+    "es"
+  ],
+  "scripts": {
+    "build": "nwb build",
+    "clean": "nwb clean",
+    "start": "nwb serve",
+    "test": "nwb test",
+    "test:watch": "nwb test --server",
+    "flow": "flow; test $? -eq 0 -o $? -eq 2"
+  },
+  "dependencies": {
+    "debug": "2.2.0"
+  },
+  "devDependencies": {
+    "eslint": "3.6.0",
+    "eslint-loader": "1.5.0",
+    "eslint-plugin-react": "6.3.0",
+    "flow-bin": "0.33.0",
+    "nwb": "0.12.x"
+  },
+  "author": "absolutemininum",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/absoluteminimum/debug-wrapper.git"
+  }
+}
