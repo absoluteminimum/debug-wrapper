@@ -20,7 +20,7 @@ const debug = function(namespace, color) {
     let last = arguments[arguments.length - 1]
     // can't do debugjs.color because that is for that same ns...
     // debugjs.color = last.replace('c:', '')
-    if (last.includes('c:')) {
+    if (typeof last === 'string' && last.includes('c:')) {
       last = last.replace('c:', '')
       for (let i = 0; i < arguments.length; i++) {
         arguments[i] = '%c' + arguments[i]
